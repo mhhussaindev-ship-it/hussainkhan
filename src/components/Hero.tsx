@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
@@ -63,10 +64,8 @@ export default function Hero() {
           className="relative flex justify-center"
         >
           <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full bg-gradient-to-br from-accent to-accent-2 p-1">
-            <div className="w-full h-full rounded-full bg-bg-soft flex items-center justify-center overflow-hidden border border-border">
-              {/* Replace this placeholder with your real photo: put it at /public/images/profile.jpg
-                  and swap this div for: <Image src="/images/profile.jpg" alt="M. Hussain Khan" fill className="object-cover rounded-full" /> */}
-              <span className="text-muted text-sm">Your Photo</span>
+            <div className="w-full h-full rounded-full overflow-hidden border border-border bg-bg-soft flex items-center justify-center">
+              <Image src="/profile.jpg" alt="M. Hussain Khan" width={320} height={320} className="object-cover object-top rounded-full w-full h-full" priority />
             </div>
           </div>
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-card border border-border rounded-full px-6 py-2 text-sm font-medium whitespace-nowrap">
